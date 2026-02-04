@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: <YOUR_ACR_NAME>.azurecr.io/gateway:latest
+        image: prodmicroserviceplatformregistry.azurecr.io/gateway:f66f49b18874aac274806de2de5f3ddd6073d7f3
         ports:
         - containerPort: 80
