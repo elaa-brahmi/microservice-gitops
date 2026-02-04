@@ -17,7 +17,7 @@ spec:
       containers:
       - name: auth-service
         # Placeholder: CI will replace 'latest' with the Git SHA
-        image: prodmicroserviceplatformregistry.azurecr.io/auth-service:58675053bd7082b993ab8324b04df54140a4b5ec
+        image: prodmicroserviceplatformregistry.azurecr.io/auth-service:3ea3b30386ee8fdfdef9c39693b930732052fd24
         imagePullPolicy: Always
       imagePullSecrets:
       - name: acr-pull-secret
