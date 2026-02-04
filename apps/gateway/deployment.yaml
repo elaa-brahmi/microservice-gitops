@@ -18,5 +18,7 @@ spec:
       - name: gateway
         image: prodmicroserviceplatformregistry.azurecr.io/gateway:f66f49b18874aac274806de2de5f3ddd6073d7f3
         imagePullPolicy: Always
+      imagePullSecrets:
+      - name: acr-pull-secret
         ports:
         - containerPort: 80
