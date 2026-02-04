@@ -17,7 +17,7 @@ spec:
       containers:
       - name: auth-service
         # Placeholder: CI will replace 'latest' with the Git SHA
-        image: prodmicroserviceplatformregistry.azurecr.io/auth-service:4786e0d3b17cc14efb0c2f9dba9ea919c51c029b
+        image: prodmicroserviceplatformregistry.azurecr.io/auth-service:a6b667f140cc189e824fbb637a5813626c802206
         imagePullPolicy: Always
         ports:
         - containerPort: 3001
