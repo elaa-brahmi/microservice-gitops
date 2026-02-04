@@ -17,5 +17,6 @@ spec:
       containers:
       - name: gateway
         image: prodmicroserviceplatformregistry.azurecr.io/gateway:f66f49b18874aac274806de2de5f3ddd6073d7f3
+        imagePullPolicy: Always
         ports:
         - containerPort: 80

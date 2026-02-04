@@ -17,5 +17,6 @@ spec:
       containers:
       - name: tasks-service
         image: prodmicroserviceplatformregistry.azurecr.io/tasks-service:4786e0d3b17cc14efb0c2f9dba9ea919c51c029b
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
