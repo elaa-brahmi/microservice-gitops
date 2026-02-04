@@ -4,20 +4,22 @@ metadata:
   name: microservice-ingress-app
   annotations:
     kubernetes.io/ingress.class: nginx
+    # Add this line to strip the prefix before forwarding
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /auth
-        pathType: Prefix
+      - path: /auth(/|$)(.*) # Captures everything after /auth into $2
+        pathType: ImplementationSpecific
         backend:
           service:
             name: auth-service
             port:
               number: 80
-      - path: /tasks
-        pathType: Prefix
+      - path: /tasks(/|$)(.*) # Captures everything after /tasks into $2
+        pathType: ImplementationSpecific
         backend:
           service:
             name: tasks-service
