@@ -19,7 +19,7 @@ spec:
         # Placeholder: CI will replace 'latest' with the Git SHA
         image: prodmicroserviceplatformregistry.azurecr.io/auth-service:4786e0d3b17cc14efb0c2f9dba9ea919c51c029b
         imagePullPolicy: Always
+        ports:
+        - containerPort: 3001
       imagePullSecrets:
       - name: acr-pull-secret
-        ports:
-        - containerPort: 3000
