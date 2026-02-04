@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tasks-service
-        image: <YOUR_ACR_NAME>.azurecr.io/tasks-service:latest
+        image: prodmicroserviceplatformregistry.azurecr.io/tasks-service:4786e0d3b17cc14efb0c2f9dba9ea919c51c029b
         ports:
         - containerPort: 5000
