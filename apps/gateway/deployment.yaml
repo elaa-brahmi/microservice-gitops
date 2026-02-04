@@ -18,6 +18,11 @@ spec:
       - name: gateway
         image: prodmicroserviceplatformregistry.azurecr.io/gateway:9c715a9c51f06f40520f26baa801cb2dffca0a3a
         imagePullPolicy: Always
+        env:
+        - name: AUTH_SERVICE_URL
+          value: "http://auth-service.default.svc.cluster.local"
+        - name: TASKS_SERVICE_URL
+          value: "http://tasks-service.default.svc.cluster.local"
         ports:
         - containerPort: 3000
       imagePullSecrets:
