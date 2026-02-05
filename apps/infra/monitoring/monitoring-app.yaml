@@ -14,6 +14,14 @@ spec:
         grafana:
           service:
             type: ClusterIP  # We will use your Ingress to see the dashboard
+          grafana.ini:
+            server:
+              # serve Grafana from the /grafana subpath so redirects work
+              root_url: "%(protocol)s://%(domain)s:%(http_port)s/grafana"
+              serve_from_sub_path: true
+          env:
+            GF_SERVER_ROOT_URL: "%(protocol)s://%(domain)s:%(http_port)s/grafana"
+            GF_SERVER_SERVE_FROM_SUB_PATH: "true"
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: monitoring
