@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: prodmicroserviceplatformregistry.azurecr.io/gateway:9a2bb7cbb504f82b3bedcfd36a9b47e9c97d8764
+        image: prodmicroserviceplatformregistry.azurecr.io/gateway:a5144d6c6d3e175fc408e75b362ba4f26495408e
         imagePullPolicy: Always
         env:
         - name: AUTH_SERVICE_URL
