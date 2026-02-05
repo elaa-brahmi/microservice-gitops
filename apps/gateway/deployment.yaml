@@ -20,9 +20,9 @@ spec:
         imagePullPolicy: Always
         env:
         - name: AUTH_SERVICE_URL
-          value: "http://auth-service.default.svc.cluster.local"
+          value: "http://auth-service.default.svc.cluster.local:80"
         - name: TASKS_SERVICE_URL
-          value: "http://tasks-service.default.svc.cluster.local"
+          value: "http://tasks-service.default.svc.cluster.local:80"
         ports:
         - containerPort: 3000
       imagePullSecrets:
