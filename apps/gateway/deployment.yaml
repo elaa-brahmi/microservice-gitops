@@ -25,5 +25,17 @@ spec:
           value: "http://tasks-service.default.svc.cluster.local:80"
         ports:
         - containerPort: 3000
+        readinessProbe:
+          httpGet:
+            path: /health   # Ensure your app has this endpoint!
+            port: 3000
+          initialDelaySeconds: 5  # Wait 5s after start to check
+          periodSeconds: 10       # Check every 10s
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 15 # Give it more time before killing it
+          periodSeconds: 20
       imagePullSecrets:
       - name: acr-pull-secret
