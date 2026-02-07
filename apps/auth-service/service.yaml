@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: auth-service
+  labels:
+    release: monitoring-stack
 spec:
   selector:
     app: auth-service
